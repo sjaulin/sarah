@@ -1,3 +1,4 @@
 vendor
 wp
-app/plugins
+app/plugins/*
+!app/plugins/custom-plugins

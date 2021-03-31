@@ -1,6 +1,9 @@
 {
     "name": "sjaulin/sarah-wp",
     "description": "Wordpress",
+    "config": {
+        "secure-http": false
+    },
     "repositories": [
         {
             "type": "composer",
@@ -24,9 +27,14 @@
     ],
     "require": {
         "wordpress/wordpress": "5.7",
-        "wpackagist/learnpress": "3.2.8.8"
+        "wpackagist-plugin/learnpress": "3.2.8.8"
     },
     "extra": {
+        "installer-paths": {
+            "app/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        },
         "webroot-dir": "wp",
         "webroot-package": "wordpress/wordpress"
     }
